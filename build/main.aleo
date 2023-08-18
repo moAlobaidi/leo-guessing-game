@@ -7,6 +7,10 @@ record Guess:
     is_winner as boolean.private;
 
 
+mapping winners:
+	key left as address.public;
+	value right as boolean.public;
+
 function make_guess:
     input r0 as address.private;
     input r1 as i64.private;
@@ -37,3 +41,9 @@ function finish:
     assert.eq self.caller aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh;
     cast r0.player r0.player r0.guess true into r1 as Guess.record;
     output r1 as Guess.record;
+
+    finalize r0.player;
+
+finalize finish:
+    input r0 as address.public;
+    set true into winners[r0];

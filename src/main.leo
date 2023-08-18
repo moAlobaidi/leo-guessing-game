@@ -1,6 +1,7 @@
 program guessing_game.aleo {
+mapping winners: address => bool;
 
-//owner is game host
+    //owner is game host
     record Guess {
         owner: address,
         player: address,
@@ -41,6 +42,10 @@ program guessing_game.aleo {
             player: guess.player,
             guess: guess.guess,
             is_winner: true,
-        };
+        } then finalize(guess.player);
+    }
+
+    finalize finish(player: address) {
+        Mapping::set(winners, player, true);
     }
 }
