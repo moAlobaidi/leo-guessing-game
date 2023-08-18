@@ -1,0 +1,28 @@
+[make_guess]
+player: address = aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh;
+guess: i64 = 90i64;
+
+[resolve]
+first: Guess = Guess {
+     owner: aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh,
+     player: aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh,
+     guess: 10i64,
+     is_winner: false,
+     _nonce: 6480683131255842390406647532838179519970794442201387718334686863304493823461group,
+};
+second: Guess = Guess {
+    owner: aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh,
+    player: aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh,
+    guess: 90i64,
+    is_winner: false,
+    _nonce: 1511010328912449299156978046557700301564153667442988008615502964863620401388group,
+};
+
+[finish]
+guess: Guess = Guess {
+    owner: aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh,
+    player: aleo1fxs9s0w97lmkwlcmgn0z3nuxufdee5yck9wqrs0umevp7qs0sg9q5xxxzh,
+    guess: 90i64,
+    is_winner: false,
+    _nonce: 4195536711021629817871261453343069023119119274215827022954896024118351555272group,
+};

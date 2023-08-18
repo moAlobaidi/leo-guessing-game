@@ -1,0 +1,5 @@
+*.avm
+*.prover
+*.verifier
+.idea/*
+outputs/
